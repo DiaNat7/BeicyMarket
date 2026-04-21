@@ -20,4 +20,10 @@
       <Folder Include="RepositoriesProy\InterfacesProy\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="ControllersProy\" />
+      <Folder Include="DataAccessProy\Interfaces\" />
+      <Folder Include="RepositoriesProy\InterfacesProy\" />
+    </ItemGroup>
+
 </Project>
