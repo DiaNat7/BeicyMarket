@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
-using MySqlConnector;
 using BeicyMarket._2P.API.DataAccessProy.Interfaces;
+using MySqlConnector;
 
 namespace BeicyMarket._2P.API.DataAccessProy;
 
