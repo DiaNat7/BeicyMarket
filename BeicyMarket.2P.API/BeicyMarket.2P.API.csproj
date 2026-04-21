@@ -15,4 +15,10 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="ControllersProy\" />
+      <Folder Include="DataAccessProy\Interfaces\" />
+      <Folder Include="RepositoriesProy\InterfacesProy\" />
+    </ItemGroup>
+
 </Project>
