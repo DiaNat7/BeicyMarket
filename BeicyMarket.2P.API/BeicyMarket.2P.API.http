@@ -1,0 +1,6 @@
+@BeicyMarket._2P.API_HostAddress = http://localhost:5134
+
+GET {{BeicyMarket._2P.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
