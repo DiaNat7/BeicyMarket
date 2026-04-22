@@ -6,10 +6,14 @@ namespace BeicyMarket._2P.API.DataAccessProy;
 
 public class DbContextProy : IDbContextProy
 {
-    private readonly string _connectionString = 
-        "Server=127.0.0.1;User=root;Database=BeicyMarket;Port=3306;Pwd=1234;";
-    
+    private readonly string _connectionString;
     private MySqlConnection _connection;
+
+    // Constructor que recibe la cadena de conexión
+    public DbContextProy(string connectionString)
+    {
+        _connectionString = connectionString;
+    }
 
     public DbConnection Connection
     {
@@ -19,7 +23,6 @@ public class DbContextProy : IDbContextProy
             {
                 _connection = new MySqlConnection(_connectionString);
             }
-
             return _connection;
         }
     }

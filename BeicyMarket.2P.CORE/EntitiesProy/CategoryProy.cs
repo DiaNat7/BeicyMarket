@@ -1,5 +1,8 @@
-﻿namespace BeicyMarket._2P.CORE.EntitiesProy;
+﻿using Dapper.Contrib.Extensions;
 
+namespace BeicyMarket._2P.CORE.EntitiesProy;
+
+[Table("CategoryProy")]
 public class CategoryProy : EntityBaseProy
 {
     public string Name { get; set; }

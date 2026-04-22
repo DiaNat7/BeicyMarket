@@ -1,7 +1,10 @@
-﻿namespace BeicyMarket._2P.CORE.EntitiesProy;
+﻿using Dapper.Contrib.Extensions;
+
+namespace BeicyMarket._2P.CORE.EntitiesProy;
 
 public class EntityBaseProy
 {
+    [Key]
     // El identificador único del registro
     public int Id { get; set; }
     

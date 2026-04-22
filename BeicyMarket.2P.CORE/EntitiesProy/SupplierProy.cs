@@ -1,5 +1,9 @@
+using Dapper.Contrib.Extensions;
 namespace BeicyMarket._2P.CORE.EntitiesProy;
 
+
+
+[Table("SupplierProy")]
 public class SupplierProy:EntityBaseProy
 {
     

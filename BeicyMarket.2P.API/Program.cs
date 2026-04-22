@@ -3,10 +3,13 @@ using BeicyMarket._2P.API.RepositoriesProy;
 using BeicyMarket._2P.API.RepositoriesProy.Interfaces;
 using Dapper.Contrib.Extensions;
 
-
-
 //Prepara todo para empezar a armar la API
 var builder = WebApplication.CreateBuilder(args);
+
+
+var connectionString = "Server=localhost;User=root;Pwd=SOYmeli136.;Database=BeicyMarket2;Port=3306;";
+builder.Services.AddScoped<DbContextProy>(provider => new DbContextProy(connectionString));
+// ==========================================================
 
 builder.Services.AddOpenApi();
 
@@ -18,7 +21,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //services
-builder.Services.AddScoped<DbContextProy>(); 
 builder.Services.AddScoped<ICategoryRepositoryProy, CategoryRepositoryProy>();
 builder.Services.AddScoped<IProductRepositoriesProy, ProductRepositoryProy>();
 builder.Services.AddScoped<IUserRepositoriesProy, UserRepositoryProy>();
@@ -30,19 +32,6 @@ builder.Services.AddScoped<IPaymentRepositoryProy, PaymentRepositoryProy>();
 builder.Services.AddScoped<IShippingRepositoryProy, ShippingRepositoryProy>();
 
 
-
-//mapeo
-SqlMapperExtensions.TableNameMapper = entityType =>
-{
-    var name = entityType.ToString();
-    if (name.Contains("Tecnm26.Ecommerce.Core.EntitiesProy."))
-        name = name.Replace("Tecnm26.Ecommerce.Core.EntitiesProy.", "");
-        
-    var letters = name.ToCharArray();
-    letters[0] = char.ToUpper(letters[0]);
-    return new string(letters);
-};
-
 //Termina de configurar y construye la aplicación
 var app = builder.Build();
 
@@ -52,6 +41,6 @@ app.UseSwaggerUI();
 
 // Lee las rutas de los controladores 
 app.MapControllers();
-  
+
 //Pone la API a funcionar y a escuchar peticiones
 app.Run();
