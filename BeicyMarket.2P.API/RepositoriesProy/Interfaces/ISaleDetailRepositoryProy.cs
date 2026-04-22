@@ -1,5 +1,5 @@
 
-
+namespace BeicyMarket._2P.API.RepositoriesProy.Interfaces;
     public interface ISaleDetailRepositoryProy
     {
         //metodo para guardar el detalle de venta

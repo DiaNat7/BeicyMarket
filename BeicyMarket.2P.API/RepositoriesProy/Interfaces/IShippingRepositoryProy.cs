@@ -1,3 +1,5 @@
+namespace BeicyMarket._2P.API.RepositoriesProy.Interfaces;
+
 public interface IShippingRepositoryProy
 {
     // Método para CREAR o GUARDAR un envío nuevo
