@@ -1,4 +1,6 @@
 
+using BeicyMarket._2P.CORE.EntitiesProy;
+
 namespace BeicyMarket._2P.API.RepositoriesProy.Interfaces;
     public interface ISaleDetailRepositoryProy
     {
