@@ -1,3 +1,4 @@
+namespace BeicyMarket._2P.API.RepositoriesProy.Interfaces;
 public interface ISupplierRepositoryProy
 {
     // Método para CREAR o GUARDAR un proveedor nuevo
