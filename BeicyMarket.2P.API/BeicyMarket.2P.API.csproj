@@ -13,10 +13,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="ControllersProy\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\BeicyMarket.2P.CORE\BeicyMarket.2P.CORE.csproj" />
     </ItemGroup>
 

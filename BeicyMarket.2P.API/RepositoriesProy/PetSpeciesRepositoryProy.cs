@@ -1,8 +1,9 @@
-﻿using BeicyMarket._2P.CORE.EntitiesProy;
+﻿using BeicyMarket._2P.API.RepositoriesProy.Interfaces;
+using BeicyMarket._2P.CORE.EntitiesProy;
 
 namespace BeicyMarket._2P.API.RepositoriesProy;
 
-public class PetSpeciesRepositoryProy
+public class PetSpeciesRepositoryProy :  IPetSpeciesRepositoryProy
 {
     public Task<PetSpeciesProy> SaveAsync(PetSpeciesProy petSpecies)
     {

@@ -1,10 +1,11 @@
 ﻿using BeicyMarket._2P.API.DataAccessProy;
+using BeicyMarket._2P.API.RepositoriesProy.Interfaces;
 using BeicyMarket._2P.CORE.EntitiesProy;
 using Dapper.Contrib.Extensions;
 
 namespace BeicyMarket._2P.API.RepositoriesProy;
 
-public class CategoryRepositoryProy
+public class CategoryRepositoryProy : ICategoryRepositoryProy
 {
     private readonly DbContextProy _dbContext;
 
